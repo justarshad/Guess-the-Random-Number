@@ -11,15 +11,7 @@
     --primaryLight: #98defe;
     --background: #fbdfaa;
 
-    --fontColor-100: #f8f6f6;
-    --fontColor-200: #d8d8d8;
-    --fontColor-300: #d4d3d3;
-    --fontColor-400: #a9a6a6;
-    --fontColor-500: #7f7f7f;
-    --fontColor-600: #686868;
-    --fontColor-700: #515151;
     --fontColor-800: #323232;
-    --fontColor-900: #242424;
     --fontColor-1000: #070707;
 
 }
@@ -70,49 +62,26 @@ input,
     justify-content: center;
 }
 
-.firstPage {
+:is(.firstPage, .secondPage, .thirdPage) {
     display: none;
 }
 
-.firstPage.active {
+:is(.firstPage, .secondPage, .thirdPage).active {
     display: flex;
     flex-direction: column;
     gap: 1.2em;
     align-items: center;
-    justify-content: center;
+}
+:is(.firstPage, .secondPage) p {
+    text-align: center;
+    font-size: 1.2em;
+}
+:is(.firstPage, .secondPage) p span{
+    font-weight: 600;
 }
 
 .firstPage button {
     font-size: 1.8rem;
-}
-
-.firstPage p {
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.firstPage p span {
-    font-weight: 600;
-}
-
-.secondPage {
-    display: none;
-}
-
-.secondPage.active {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
-    align-items: center;
-}
-
-.secondPage p {
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.secondPage p span {
-    font-weight: 600;
 }
 
 .secondPage .warning {
@@ -138,20 +107,9 @@ input,
     gap: .8em;
 }
 
-.thirdPage {
-    display: none;
-}
-
 .thirdPage div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.thirdPage.active {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
     align-items: center;
 }
 
@@ -169,11 +127,6 @@ input,
     }
 }
 
-@media (max-width:992px) {
-    .container {
-        max-width: 90%;
-    }
-}
 
 @media (max-width:768px) {
     .container {
