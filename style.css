@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #75c8ff;
+    --primaryLight: #98defe;
+    --background: #fbdfaa;
+
+    --fontColor-100: #f8f6f6;
+    --fontColor-200: #d8d8d8;
+    --fontColor-300: #d4d3d3;
+    --fontColor-400: #a9a6a6;
+    --fontColor-500: #7f7f7f;
+    --fontColor-600: #686868;
+    --fontColor-700: #515151;
+    --fontColor-800: #323232;
+    --fontColor-900: #242424;
+    --fontColor-1000: #070707;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    background: var(--background);
+    justify-content: center;
+}
+
+button {
+    color: var(--fontColor-800);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.6em 1.6em;
+    border: 0.07em solid var(--primary);
+    border-radius: 0.3em;
+    background: var(--primaryLight);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    color: var(--fontColor-1000);
+    background: var(--primary);
+}
+
+input,
+.liteButton {
+    color: var(--fontColor-800);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 0.4em 1em;
+    border: 0.06em solid var(--primary);
+    border-radius: 0.3em;
+    background: var(--primaryLight);
+    transition: all 0.1s ease;
+    outline: none;
+}
+
+/* ----------------- */
+.container {
+    margin-top: 8%;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstPage {
+    display: none;
+}
+
+.firstPage.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstPage button {
+    font-size: 1.8rem;
+}
+
+.firstPage p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.firstPage p span {
+    font-weight: 600;
+}
+
+.secondPage {
+    display: none;
+}
+
+.secondPage.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: center;
+}
+
+.secondPage p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.secondPage p span {
+    font-weight: 600;
+}
+
+.secondPage .warning {
+    color: red;
+}
+
+.secondPage div {
+    display: flex;
+    gap: 1.2em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondPage div :is(input, button) {
+    font-size: 2em;
+}
+
+.secondPage .submitedAtempts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: .8em;
+}
+
+.thirdPage {
+    display: none;
+}
+
+.thirdPage div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thirdPage.active {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+.thirdPage p {
+    font-size: 3.4em;
+}
+
+.thirdPage button {
+    font-size: 1.3em;
+}
+
+@media (max-width:1080px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 98%;
+    }
+}
+
+@media (max-width:576px) {
+    html {
+        font-size: 75%;
+    }
+}

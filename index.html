@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Random Number</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="firstPage active">
+            <p>We will generate a random Number between <span>0</span>
+                to <span>100</span> and you have to Guess it, We will tell you how much Attempts you take to Guess it
+            </p>
+            <button class="start">Start</button>
+        </div>
+        <div class="secondPage">
+            <p>We generated a random Number between <span>0</span>
+                to <span>100</span></p>
+            <div>
+                <input type="text" maxlength="2"><button class="liteButton">Submit</button>
+            </div>
+            <span class="warning"></span>
+            <div class="submitedAtempts">
+            </div>
+        </div>
+        <div class="thirdPage">
+            <div>
+                <p>Congratulations</p>
+                <span class="attemptsResult"></span>
+            </div>
+            <button class="startAgain">Start Again</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
